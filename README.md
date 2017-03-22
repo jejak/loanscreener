@@ -104,7 +104,7 @@ Options:
 
 ````````````````````````
 cd Code
-loanscreener <url-of-marketdata-json> <url-of-loandata-json>
+loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicydata-json>
 ````````````````````````
 
 ## To Run the unit test
