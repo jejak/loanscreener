@@ -3,7 +3,7 @@
 This is a proto Command-line Interface program to screen defaulting loans in a banking infrastructure taking the loan data, the loan credit policy data and stock market quotes from the internet from one or more banking subsidiaries.
 
 The program
-- takes url-s to Json files of market data, loan data and credit policies as command-line parameters and
+- takes url-s of Json files of market data, loan data and credit policies as command-line parameters and
 - generates json output on STDOUT showing which loans are now in default
 - if any error occured it would be reported on STDERR  
 
