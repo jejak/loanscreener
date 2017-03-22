@@ -23,7 +23,7 @@ Notes:
 Example output:
 
 ````````````````````
-$ ./loan-screener http://ws.jenojakab.com/files/marketdata.json \
+$ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
               http://ws.jenojakab.com/files/loandata.json \
               http://ws.jenojakab.com/files/creditpolicy.json
 
@@ -91,8 +91,8 @@ Do the above build step
 ### See Usage
 
 ````````````````````````
-Usage: loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicy-json>
-       loanscreener http://ws.jenojakab.com/files/marketdata.json \
+Usage: ruby -Ilib bin/loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicy-json>
+       ruby -Ilib bin/loanscreener http://ws.jenojakab.com/files/marketdata.json \
                      http://ws.jenojakab.com/files/loandata.json \
                      http://ws.jenojakab.com/files/creditpolicy.json
 
@@ -104,7 +104,7 @@ Options:
 
 ````````````````````````
 cd Code
-loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicydata-json>
+ruby -Ilib bin/loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicydata-json>
 ````````````````````````
 
 ## To Run the unit test
