@@ -1,6 +1,6 @@
 # Loan Screener
 
-This is a proto Command-line Interface program to screen defaulting loans in a banking infrastructure taking the loan data, the loan credit policy data and stock market quotes from the internet from one or more banking subsidiaries.
+Loan Screener is a proto Command-line Interface program to screen defaulting loans in a banking infrastructure taking the loan data, the loan credit policy data and stock market quotes from the internet from one or more banking subsidiaries.
 
 The program
 - takes url-s of Json files of market data, loan data and credit policies as command-line parameters and
