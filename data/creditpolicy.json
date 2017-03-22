@@ -1,0 +1,10 @@
+{
+    "policy1": {
+        "currency": "USD",
+        "price": 1.00
+    },
+    "policy2": {
+        "currency": "USD",
+        "price": 10.00
+    }
+}
