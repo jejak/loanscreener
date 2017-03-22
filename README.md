@@ -103,15 +103,15 @@ Options:
 ## Run these Commands
 
 ````````````````````````
-cd Code
-ruby -Ilib bin/loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicydata-json>
+> cd Code
+> ruby -Ilib bin/loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicydata-json>
 ````````````````````````
 
 ## To Run the unit test
 
 ````````````````````````
-cd Code
-rake test
+> cd Code
+> rake test
 ````````````````````````
 
 The test results would genereted on the console.
@@ -119,7 +119,7 @@ The test results would genereted on the console.
 (Example result)
 
 ````````````````````````
-$ rake test
+> rake test
 
 # Running:
 
@@ -128,4 +128,6 @@ $ rake test
 Finished in 0.032282s, 154.8846 runs/s, 1827.6378 assertions/s.
 
 5 runs, 59 assertions, 0 failures, 0 errors, 0 skips
+
 ````````````````````
+
