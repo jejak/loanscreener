@@ -1,6 +1,6 @@
 # Loan Screener
 
-This is a proto Command-line Interface program tool which demonstrates how loan sccreening can be implemented in a banking infrastructure taking the loan data, the loan credit policy data and stock market quotes from the internet from one or more banking subsidiaries.
+This is a proto Command-line Interface program to screen defaulting loans in a banking infrastructure taking the loan data, the loan credit policy data and stock market quotes from the internet from one or more banking subsidiaries.
 
 The program
 - takes url-s to Json files of market data, loan data and credit policies as command-line parameters and
@@ -26,9 +26,7 @@ Example output:
 $ ./loan-screener http://ws.jenojakab.com/files/marketdata.json \
               http://ws.jenojakab.com/files/loandata.json \
               http://ws.jenojakab.com/files/creditpolicy.json
-              ````````````````````
 
-````````````````````
 [
   {
     "id": "loan1234",
@@ -36,7 +34,7 @@ $ ./loan-screener http://ws.jenojakab.com/files/marketdata.json \
     "amount": 10000,
     "eligible_collateral": 9999,
   },
-...
+  ...
 ]
 ````````````````````
 
@@ -91,6 +89,7 @@ To build the program run the following commands.
 Do the above build step
 
 ### See Usage
+
 ````````````````````````
 Usage: loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicy-json>
        loanscreener http://ws.jenojakab.com/files/marketdata.json \
@@ -102,6 +101,7 @@ Options:
 ````````````````````````
 
 ## Run these Commands
+
 ````````````````````````
 cd Code
 loanscreener <url-of-marketdata-json> <url-of-loandata-json>
@@ -117,12 +117,13 @@ rake test
 The test results would genereted on the console.
 
 (Example result)
+
 ````````````````````````
 $ rake test
 
 # Running:
 
-.....
+ .....
 
 Finished in 0.032282s, 154.8846 runs/s, 1827.6378 assertions/s.
 
