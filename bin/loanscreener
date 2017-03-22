@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+# encoding: UTF-8
+
+require "loanscreener"
+
+def help(out=STDERR)
+  out.puts HELP
+end
+
+HELP = <<END
+
+Loan screener
+=============
+The program takes url-s of marketdata.json, loandata.json and creditpolicy.json as input
+and processes the loandata and its share position data for detecting if the loan is on default.
+
+For all loans found on default, there would be a loan alert generated.
+
+The program outpui is the loan alert array in json format on the STDOUT.
+If any error occured the error is reported on the STDERR.
+
+Usage: loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicy-json>
+       loanscreener http://ws.jenojakab.com/files/marketdata.json \\
+                     http://ws.jenojakab.com/files/loandata.json \\
+                     http://ws.jenojakab.com/files/creditpolicy.json
+
+Options:
+--help        Prints this help"
+
+
+END
+
+def run_screener()
+  urls = {
+    "marketdatajson" => ARGV[0],
+    "loandatajson" => ARGV[1],
+    "creditpolicyjson" => ARGV[2]
+  }
+
+  lsr = LoanScreener.new(urls)
+  begin
+    lsr
+      .load_data()
+      .screen()
+      .create_report()
+  rescue => err_msg
+    STDERR.puts err_msg
+  end
+end
+
+# MAIN
+case
+when ARGV.first.downcase =~ /[-]?[-]?help/
+  help STDOUT
+when ARGV.empty?, ARGV.length < 3
+  STDERR.puts
+  STDERR.puts "Insufficient number of command-line parameters ...> see <help>"
+  STDERR.puts
+  help
+else
+  run_screener
+end
