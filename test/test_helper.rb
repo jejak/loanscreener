@@ -108,7 +108,7 @@ module LsrTestCommons
       .to_return(body: creditpolicy_body().to_json())
   end
 
-    def create_stubs_file_based(dir = "#{File.join(File.dirname(__FILE__), '..', 'data')}")
+  def create_stubs_file_based(dir = "#{File.join(File.dirname(__FILE__), '..', 'data')}")
     marketdata_file = File.join(dir, 'marketdata.json')
     loandata_file = File.join(dir, 'loandata.json')
     creditpolicy_file = File.join(dir, 'creditpolicy.json')

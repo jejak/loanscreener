@@ -3,6 +3,7 @@
 require_relative "test_helper"
 
 class LoanScreenerTestSet1 < Minitest::Test
+
   include LsrTestCommons
 
   def setup
@@ -16,6 +17,7 @@ class LoanScreenerTestSet1 < Minitest::Test
   end
 
   def test__two_loans_one_pos_not_eligible_by_cp_thr__should_return_one_loan_alert
+
     # Stubs
     create_stubs()
 
@@ -50,6 +52,7 @@ class LoanScreenerTestSet1 < Minitest::Test
   end
 
   def test__two_loans_one_pos_not_eligible_by_cp_thr__should_return_two_loan_alert
+
     loandata_body[0]['amount'] = 480023
 
     # Stubs
@@ -88,6 +91,7 @@ class LoanScreenerTestSet1 < Minitest::Test
   end
 
   def test__two_loans_two_pos_not_eligible_by_cp_ccyandthr__should_return_one_loan_alert
+
     loandata_body[0]['amount'] = 480023
     marketdata_body[2]['currency'] = 'EUR'
 
@@ -125,6 +129,7 @@ class LoanScreenerTestSet1 < Minitest::Test
   end
 
   def test__sample_data_from_files__should_return_two_loan_alert
+
     # Stubs
     create_stubs_file_based()
 
@@ -157,10 +162,10 @@ class LoanScreenerTestSet1 < Minitest::Test
   end
 
   def test__internal_server_error__should_return_error
+
     # Stubs
     create_error_stubs()
 
-    # Let's capture the stdout to get the output
     exp = assert_raises RuntimeError  do
       @lsr
         .load_data()
