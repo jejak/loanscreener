@@ -45,19 +45,21 @@ $ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
 ## Design
 
 * the choice of programming language is: ruby
-* use the Net::HTTP lib of the Ruby Standard Library to do http get to retrieve the market data, loan data and credit policies data from the internet
-* use the json lib of the Ruby Standard Library which is natively support the json format
+* use the Net::HTTP lib of Ruby Standard Library to do http get to retrieve the market data, loan data and credit policies data from the internet
+* use the json lib of Ruby Standard Library which natively supports the json format
 * used JSON.parse() and JSON.to_json() to do conversion between json and ruby expressions
 
 Call Follow
 - get the content of market data, loan data and credit policy json
-- processed loan data which is an array of loan for default checks
-- for all loan calculated eligible colleteral value
-- eligibilty check done for the position data according to the loan credit policy (eligibility check for currency and price threshold)
-- default established
-- if eligible-calculated-loan-colleteral-value> < loan-amount
+- process loan data (which is an array of loans) for default checks
+- for all loans calculates the eligible colleteral value
+- do eligibilty check for the loan equity positions according to the loan credit policy (eligibility check for currency and price threshold)
+- establishes if loan is in default
+    * loan in default if: 
+        - *eligible-calculated-loan-colleteral-value> < loan-amount*
 - generate report from all collected defaulted loan
-- report entries formatted as per requirement
+- report entries formatted as per requirement on STDOUT
+- report any error occured on STDERR
 
 *Note: if there is no any eligible positon for a loan then this loan is not regarded as defaulting loan*
 
