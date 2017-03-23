@@ -53,8 +53,8 @@ Call Follow
 - establishes if loan is in default
     * loan in default if: 
         - *eligible-calculated-loan-collateral-value> < loan-amount*
-- generate report from all collected defaulted loan
-- report entries formatted as per requirement on STDOUT
+- generate report from all collected defaulting loans
+- format report entries as per requirement on STDOUT
 - report any error occured on STDERR
 
 *Note: if there is no any eligible positon for a loan then this loan is not regarded as defaulting loan*
