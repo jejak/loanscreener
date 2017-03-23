@@ -97,7 +97,7 @@ Usage: ruby -Ilib bin/loanscreener <url-of-marketdata-json> <url-of-loandata-jso
                      http://ws.jenojakab.com/files/creditpolicy.json
 
 Options:
---help        Prints this help"
+--help        Prints this help
 ````````````````````````
 
 ## Run these Commands
