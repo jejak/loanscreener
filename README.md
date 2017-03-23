@@ -98,14 +98,14 @@ Options:
 --help        Prints this help
 ````````````````````````
 
-## Run these Commands
+## Run these commands
 
 ````````````````````````
 > cd Code
 > ruby -Ilib bin/loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicydata-json>
 ````````````````````````
 
-## To Run the unit test
+## To Run the Unit Test
 
 ````````````````````````
 > cd Code
