@@ -60,8 +60,8 @@ Call Follow
 *Note: if there is no any eligible positon for a loan then this loan is not regarded as defaulting loan*
 
 Unit test
-- used Ruby MiniTests framwork for unit testing and
-- used Ruby WebMock to fake remote HTTP file server so that the test cases can run without a real internet connection   
+- used Ruby MiniTest framwork for unit testing and
+- used Ruby WebMock gem to stub to mock remote HTTP file server so that the test cases can run without a real internet connection   
 - the test checks error and success senerios
 - if report expacted the reporting entries are checked if they are complete in the output json
 
