@@ -51,7 +51,7 @@ class LoanScreenerTestSet1 < Minitest::Test
     assert_equal expCollateralValue, res[0]["eligible_collateral"]
   end
 
-  def test__two_loans_one_pos_not_eligible_by_cp_thr__should_return_two_loan_alert
+  def test__two_loans_one_pos_not_eligible_by_cp_thr__should_return_two_loan_alerts
 
     loandata_body[0]['amount'] = 480023
 
@@ -128,7 +128,7 @@ class LoanScreenerTestSet1 < Minitest::Test
     assert_equal expCollateralValue, res[0]["eligible_collateral"]
   end
 
-  def test__sample_data_from_files__should_return_two_loan_alert
+  def test__sample_data_from_files__should_return_two_loan_alerts
 
     # Stubs
     create_stubs_file_based()
