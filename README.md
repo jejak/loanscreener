@@ -7,7 +7,7 @@ The program
 - generates json output on STDOUT showing which loans are now in default
 - if any error occured it would be reported on STDERR  
 
-Notes:
+**Notes**
 * Loans contain:
     - a reference to the credit policy
     - a loan id
@@ -19,7 +19,7 @@ Notes:
 * The value of the collateral is number of eligible shares x eligible price of share. If the credit policy deems shares ineligible they are omitted from the calculation.
 * A loan is considered in default if its eligible 
 
-Example output:
+**Example output**
 
 ````````````````````
 $ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
@@ -44,7 +44,7 @@ $ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
 * use the json lib of Ruby Standard Library which natively supports the json format
 * used JSON.parse() and JSON.to_json() to do conversion between json and ruby expressions
 
-Call Follow
+### Call Follow
 - get the content of market data, loan data and credit policy json
 - process loan data (which is an array of loans) for default checks
 - for all loans calculates the eligible collateral value
@@ -58,7 +58,7 @@ Call Follow
 
 *Note: if there is no any eligible positon for a loan then this loan is not regarded as defaulting loan*
 
-Unit Test
+### Unit Test
 - used Ruby MiniTest framwork for unit testing and
 - used Ruby WebMock gem to stub to mock remote HTTP file server so that the test cases can run without a real internet connection   
 - the test checks error and success senerios
