@@ -38,10 +38,6 @@ $ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
 ]
 ````````````````````
 
-  The project also contains:
-     * unit test and
-     * documentation
-
 ## Design
 
 * the choice of programming language is: ruby
