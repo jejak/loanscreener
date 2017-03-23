@@ -112,7 +112,7 @@ Options:
 > rake test
 ````````````````````````
 
-The test results would genereted on the console.
+The test results would be genereted on the console.
 
 ### Example test results
 
