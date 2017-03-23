@@ -86,7 +86,7 @@ To build the program run the following commands.
 
 Do the above build step
 
-### See Usage
+### See usage
 
 ````````````````````````
 Usage: ruby -Ilib bin/loanscreener <url-of-marketdata-json> <url-of-loandata-json> <url-of-creditpolicy-json>
