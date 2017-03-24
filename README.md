@@ -42,7 +42,7 @@ $ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
 * the choice of programming language is: ruby
 * use the Net::HTTP lib of Ruby Standard Library to do http get to retrieve the market data, loan data and credit policies data from the internet
 * use the json lib of Ruby Standard Library which natively supports the json format
-* used JSON.parse() and JSON.to_json() to do conversion between json and ruby expressions
+* use JSON.parse() and JSON.to_json() to do conversion between json and ruby expressions
 
 ### Call Follow
 - get the content of market data, loan data and credit policy json
