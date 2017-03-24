@@ -47,7 +47,7 @@ $ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
 ### Call Follow
 - get the content of market data, loan data and credit policy json
 - process loan data (which is an array of loans) for default checks
-- for all loans calculates the eligible collateral value
+- calculate the eligible collateral value for all loan 
 - do eligibilty check for the loan equity positions according to the loan credit policy (eligibility check for currency and price threshold)
 - establishes if loan is in default
     * loan in default if:
