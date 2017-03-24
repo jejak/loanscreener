@@ -62,7 +62,7 @@ $ ruby -Ilib bin/loan-screener http://ws.jenojakab.com/files/marketdata.json \
 - used Ruby MiniTest framwork for unit testing and
 - used Ruby WebMock gem to stub to mock remote HTTP file server so that the test cases can run without a real internet connection   
 - the test checks error and success senerios
-- if report expacted the reporting entries are checked if they are complete in the output json
+- if a report expected all the reporting entries are checked in the output json if all reprorting attributes are present
 
 ## Notation
 
